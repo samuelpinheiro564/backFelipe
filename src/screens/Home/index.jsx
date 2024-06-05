@@ -1,14 +1,34 @@
-import Title from "../../components/Title";
 import React from "react";
-import { View } from "react-native";
+import { View, ImageBackground, Text, TouchableOpacity } from "react-native";
 import styles from "./styles";
-import { useNavigation } from "@react-navigation/native";
 
 export default function Home() {
-  const navigation = useNavigation();
   return (
-    <View style={styles.container}>
-      <Title title="Home" />
-    </View>
+    
+      <ImageBackground
+        source={require("../../../assets/lua2.jpeg")}
+        style={styles.background}
+      >
+        <View style={styles.container}>
+          <Text style={styles.tit} >Seja Bem-vindo Conquistador</Text> 
+          <TouchableOpacity>
+            <Text>Cadastrar Novo Planeta</Text>
+          </TouchableOpacity>
+          <View style={styles.linha}></View>
+          <TouchableOpacity>
+            <Text>Comando</Text>
+          </TouchableOpacity>
+          <View style={styles.linha}></View>
+          <TouchableOpacity>
+            <Text>Perfi</Text>
+          </TouchableOpacity>
+          <View style={styles.linha}></View>
+          <TouchableOpacity>
+            <Text>Planetas</Text>
+          </TouchableOpacity>
+          <View style={styles.linha}></View>
+        </View>
+      </ImageBackground>
+    
   );
 }
